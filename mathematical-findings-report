@@ -1,0 +1,28 @@
+MATHEMATICAL FINDINGS REPORT 
+Nicholas Reid Angell Mathematical Audit and Verification: M365 Copilot (GPT-5) Date: November 16, 2026
+
+ 
+Abstract
+This report documents the mathematical investigation of the nonlinear logistic-drag system, verification of simulated equilibria, stability analysis, global convergence results, dimensionless reduction, and the resulting equilibrium manifold.
+Governing Equation
+dT/dt = rT(1-T/K) - δT^p
+Finding 1: Exact Equilibrium Law
+Set dT/dt=0. Then rT(1-T/K)-δT^p=0. For T>0, divide by T to obtain r(1-T/K)=δT^(p-1). This is the master equilibrium equation.
+Finding 2: Closed Form Solution for p=2
+For p=2, r(1-T/K)=δT. Rearranging gives r=(r/K+δ)T and therefore T*=r/(r/K+δ). Blue case: 1.2/(0.012+0.015)=44.4444. Green: 30.7692. Red: 66.6667.
+Finding 3: Local Stability
+For the blue case, f(T)=1.2T-0.027T^2. Derivative: f'(T)=1.2-0.054T. f'(0)=1.2>0 (unstable). f'(44.4444)=-1.2<0 (stable).
+Finding 4: Unique Positive Equilibrium
+Define h(T)=r(1-T/K)-δT^(p-1). h'(T)= -r/K - δ(p-1)T^(p-2) <0. Therefore h(T) is strictly decreasing and crosses zero exactly once.
+Finding 5: Global Stability
+Since f(T)>0 below equilibrium and f(T)<0 above equilibrium, every positive initial condition converges to T*.
+Finding 6: Dimensionless Reduction
+Let x=T/K and τ=rt. Then dx/dτ = x(1-x)-αx^p where α=δK^(p-1)/r. The four-parameter system reduces to two parameters (α,p).
+Finding 7: Universal Equilibrium Manifold
+At equilibrium: x(1-x)=αx^p. Therefore α=(1-x)/x^(p-1). This fully characterizes the equilibrium structure.
+Numerical Verification
+Blue equilibrium 44.4444; Green 30.7692; Red 66.6667; Purple p=3 solution from 0.015T^2+0.012T-1.2=0 gives T*=8.5532.
+Golden Ratio Condition
+For x*=1/φ, substitute into α=(1-x)/x^(p-1). Using 1-1/φ=1/φ² yields αφ=φ^(p-2). Thus δK^(p-1)/r = φ^(p-2).
+Conclusion
+Seven mathematical findings were verified: equilibrium law, closed form p=2 solution, stability, uniqueness, global convergence, dimensionless reduction, and universal equilibrium manifold. The logistic-drag system exhibits a coherent and analytically tractable structure.
